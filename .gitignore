@@ -1,0 +1,11 @@
+ 
+
+voluntariat-SAJMM-api/node_modules/
+
+*.js
+
+voluntariat-SAJMM-api/app/uploads/cv/
+
+voluntariat-SAJMM-api/app/uploads/letterOfApplications/
+
+voluntariat-SAJMM-api/package-lock.json
