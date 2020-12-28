@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>config | api</title>
-	<meta name="description" content="Documentation for api">
+	<title>config | voluntariat-SAJMM-api</title>
+	<meta name="description" content="Documentation for voluntariat-SAJMM-api">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">api</a>
+					<a href="../index.html" class="title">voluntariat-SAJMM-api</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">api</a>
+					<a href="../modules.html">voluntariat-SAJMM-api</a>
 				</li>
 				<li>
 					<a href="config.html">config</a>
@@ -65,6 +65,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Configuration file</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -72,12 +79,7 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="config.html#cryptokey" class="tsd-kind-icon">crypto<wbr>Key</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="config.html#db" class="tsd-kind-icon">db</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="config.html#domain" class="tsd-kind-icon">domain</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="config.html#mailconfigs" class="tsd-kind-icon">mail<wbr>Configs</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="config.html#port-1" class="tsd-kind-icon">port</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="config.html#tokenkey" class="tsd-kind-icon">token<wbr>Key</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="config.html#port" class="tsd-kind-icon">port</a></li>
 							</ul>
 						</section>
 					</div>
@@ -86,111 +88,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="cryptokey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> crypto<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">crypto<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = crypto.createHash(&#x27;sha256&#x27;).update(String(&#x27;401b09eab3c013d4ca5492b0090fb922bb802bec8fd5318192b092b0090fb090fb92b0090fb337592b0090fb992b0090fb1abd3e44453b954592b0090fb55b7a0812e1081c39b740293f765eae731f5a65ed137591abd3e44453b954555b7a0812e1081c39b740293f765eae731f5a65ed15f201d8b3727429090fb338591abd3e44453b954555b7a0812e1081c39b740293f765eae731f5a65ed1&#x27;)).digest(&#x27;base64&#x27;).substr(0, 32)</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in config.ts:26</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="db" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> db</h3>
-					<div class="tsd-signature tsd-kind-icon">db<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>connectionTimeoutMillis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>idleTimeoutMillis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>user<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {host: &#x27;192.168.0.110&#x27;,database: &#x27;voluntari_saj&#x27;,user: &#x27;postgres&#x27;,port: 5432,password: &#x27;Devconnect2016&#x27;,max: 20,idleTimeoutMillis: 30000,connectionTimeoutMillis: 2000}</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in config.ts:3</li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>connection<wbr>Timeout<wbr>Millis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>idle<wbr>Timeout<wbr>Millis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>user<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="domain" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> domain</h3>
-					<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;192.168.0.246:8000&quot;</span><span class="tsd-signature-symbol"> = &quot;192.168.0.246:8000&quot;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in config.ts:2</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="mailconfigs" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> mail<wbr>Configs</h3>
-					<div class="tsd-signature tsd-kind-icon">mail<wbr>Configs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>smtp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>smtpPort<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {username: &#x27;voluntari.sajmm@gmail.com&#x27;,password: &#x27;Devconnect2016#Secure&#x27;,smtp: &#x27;smtp.gmail.com&#x27;,smtpPort: 587,secure: true}</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in config.ts:13</li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>secure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>smtp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>smtp<wbr>Port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="port-1" class="tsd-anchor"></a>
+					<a name="port" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> port</h3>
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">8000</span><span class="tsd-signature-symbol"> = process.env.PORT || 8000</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in config.ts:23</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="tokenkey" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> token<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">token<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;(kj+-_W7x:zAtu(o3gN4MT2es[&#x3D;E#|+I:_&amp;y8-tQt2@6Q07ZdBIJmJr4p4WQ8BRHsKKSThVOcgbBYvTwVKkA6D9S14CZUKNFVZtjoWVAD53oopHhW};}}GD565?qD/YZ5lB9&#x3D;w0?LM-ru[pUfUukH~-c461BF9FE4V&#x3D;Op&lt;(&lt;ZB,{XPF5B6BEqBrXVcuqqRl6kJvIubouX3FqtHswSpQK58CB9selH!oV5WA&lt;5y;cNEo-Yl.[R~|8]0(4FkveE8VcoEii5AxW9HqWUfs1lBqmtuyXCC3B36BD3E5168841QDFE+^DA}&amp;vR)%Du@R~:5exW{)X[GaNh&#x3D;Cttk|XQ,@U&#x27; ^ 5} +Jcc1ZQ)&#x3D;24F2E4873CCCE54793FF685ADD9C5F&quot;</span><span class="tsd-signature-symbol"> = &#x60;(kj+-_W7x:zAtu(o3gN4MT2es[&#x3D;E#|+I:_&amp;y8-tQt2@6Q07ZdBIJmJr4p4WQ8BRHsKKSThVOcgbBYvTwVKkA6D9S14CZUKNFVZtjoWVAD53oopHhW};}}GD565?qD/YZ5lB9&#x3D;w0?LM-ru[pUfUukH~-c461BF9FE4V&#x3D;Op&lt;(&lt;ZB,{XPF5B6BEqBrXVcuqqRl6kJvIubouX3FqtHswSpQK58CB9selH!oV5WA&lt;5y;cNEo-Yl.[R~|8]0(4FkveE8VcoEii5AxW9HqWUfs1lBqmtuyXCC3B36BD3E5168841QDFE+^DA}&amp;vR)%Du@R~:5exW{)X[GaNh&#x3D;Cttk|XQ,@U&#x27; ^ 5} +Jcc1ZQ)&#x3D;24F2E4873CCCE54793FF685ADD9C5F&#x60;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in config.ts:25</li>
+							<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/config.ts#L41">config.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -227,22 +130,25 @@
 						<a href="routes_routes.html">routes/<wbr>Routes</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="routes_authentication_authentication.html">routes/authentication/authentication</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_authentication_resets.html">routes/authentication/resets</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_authentication_restrict.html">routes/authentication/restrict</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_data_geographics.html">routes/data/geographics</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_data_statuses.html">routes/data/statuses</a>
+						<a href="routes_administration_routes_administration_routes.html">routes/administration_<wbr>routes/administration_<wbr>routes</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="routes_routes_query.html">routes/routes.query</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_authentication.html">routes/unsecure_<wbr>routes/authentication/authentication</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_resets.html">routes/unsecure_<wbr>routes/authentication/resets</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_restrict.html">routes/unsecure_<wbr>routes/authentication/restrict</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_data_geographics.html">routes/unsecure_<wbr>routes/data/geographics</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_data_statuses.html">routes/unsecure_<wbr>routes/data/statuses</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="routes_volunteers_routes_volunteer_applications.html">routes/volunteers_<wbr>routes/volunteer_<wbr>applications</a>
@@ -258,22 +164,7 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="config.html#cryptokey" class="tsd-kind-icon">crypto<wbr>Key</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="config.html#db" class="tsd-kind-icon">db</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="config.html#domain" class="tsd-kind-icon">domain</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="config.html#mailconfigs" class="tsd-kind-icon">mail<wbr>Configs</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="config.html#port-1" class="tsd-kind-icon">port</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="config.html#tokenkey" class="tsd-kind-icon">token<wbr>Key</a>
+						<a href="config.html#port" class="tsd-kind-icon">port</a>
 					</li>
 				</ul>
 			</nav>

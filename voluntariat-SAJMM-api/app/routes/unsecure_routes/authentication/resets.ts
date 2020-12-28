@@ -1,11 +1,11 @@
 import Koa from "koa";
-import { mailConfigs, domain } from "../../config";
+import { mailConfigs, domain } from "../../../config";
 import fs from 'fs';
-import { executeQuery } from "../../database/db";
-import * as query from '../../routes/routes.query';
-import { generateCustomKeyToken } from "../../token";
-import IMailOption from "../../interfaces/IMailOption";
-import { sendEmail } from "../../utils/email";
+import { executeQuery } from "../../../database/db";
+import * as query from '../../routes.query';
+import { generateCustomKeyToken } from "../../../token";
+import IMailOption from "../../../interfaces/IMailOption";
+import { sendEmail } from "../../../utils/email";
 
 
 export async function changePassword(ctx: Koa.Context) {

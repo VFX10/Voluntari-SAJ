@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "voluntariat-SAJMM-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -48,5 +48,9 @@
   },
   "devDependencies": {
     "@types/koa-static": "^4.0.1"
+  },
+  "typedocOptions": {
+    "mode": "modules",
+    "out": "docs"
   }
 }

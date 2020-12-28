@@ -1,7 +1,7 @@
 import Koa from 'koa';
-import * as query from '../routes.query';
-import { generateToken } from '../../token'
-import { executeQuery } from '../../database/db';
+import * as query from '../../routes.query';
+import { generateToken } from '../../../token'
+import { executeQuery } from '../../../database/db';
 
 /**
   * Check users credential and generate encypted token

@@ -1,5 +1,5 @@
-import { executeQuery } from "../../database/db";
-import * as query from '../routes.query';
+import { executeQuery } from "../../../database/db";
+import * as query from '../../routes.query';
 
 
 export async function suspendUser(ctx: any) {

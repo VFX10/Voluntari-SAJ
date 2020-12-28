@@ -1,11 +1,14 @@
 import { verifyPasswordChangeToken, verifyVolunteerToken, verifyAdministratorToken } from '../token';
 import KoaRouter from 'koa-router';
-import { acceptApplication, createApplication, getAllAplications, planMeeting, rejectApplication } from './volunteers_routes/volunteer_applications';
-import { getCitiesByCounty, getCountiesWithCities, getSerieses, getSeriesesByCounty } from './data/geographics';
-import { login, registerAdministrator, registerVolunteer } from './authentication/authentication';
-import { activateUser, suspendUser } from './authentication/restrict';
-import { changePassword, resetPasswordPage } from './authentication/resets';
-import { getAllStatuses } from './data/statuses';
+import { createApplication } from './volunteers_routes/volunteer_applications';
+import { getCitiesByCounty, getCountiesWithCities, getSerieses, getSeriesesByCounty } from './unsecure_routes/data/geographics';
+import { login, registerAdministrator, registerVolunteer } from './unsecure_routes/authentication/authentication';
+import { activateUser, suspendUser } from './unsecure_routes/authentication/restrict';
+import { changePassword, resetPasswordPage } from './unsecure_routes/authentication/resets';
+import { getAllStatuses } from './unsecure_routes/data/statuses';
+import { acceptApplication, getAllAplications, planMeeting, rejectApplication } from './administration_routes/administration_routes';
+
+
 
 /**
  * Represents routes that are available only for volunteers

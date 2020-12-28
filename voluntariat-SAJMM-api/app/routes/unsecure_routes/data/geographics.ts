@@ -1,7 +1,7 @@
-import * as query from '../routes.query';
+import * as query from '../../routes.query';
 import Koa from 'koa';
 
-import { executeQuery } from "../../database/db";
+import { executeQuery } from "../../../database/db";
 
 export async function getCitiesByCounty(ctx: Koa.Context) {
     if (ctx.request.query.county) {

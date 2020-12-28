@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>routes/volunteers_routes/volunteer_applications | voluntariat-SAJMM-api</title>
+	<title>routes/administration_routes/administration_routes | voluntariat-SAJMM-api</title>
 	<meta name="description" content="Documentation for voluntariat-SAJMM-api">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">voluntariat-SAJMM-api</a>
 				</li>
 				<li>
-					<a href="routes_volunteers_routes_volunteer_applications.html">routes/volunteers_routes/volunteer_applications</a>
+					<a href="routes_administration_routes_administration_routes.html">routes/administration_routes/administration_routes</a>
 				</li>
 			</ul>
-			<h1>Module routes/volunteers_routes/volunteer_applications</h1>
+			<h1>Module routes/administration_routes/administration_routes</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,10 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_volunteers_routes_volunteer_applications.html#createapplication" class="tsd-kind-icon">create<wbr>Application</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_administration_routes_administration_routes.html#acceptapplication" class="tsd-kind-icon">accept<wbr>Application</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_administration_routes_administration_routes.html#getallaplications" class="tsd-kind-icon">get<wbr>All<wbr>Aplications</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_administration_routes_administration_routes.html#planmeeting" class="tsd-kind-icon">plan<wbr>Meeting</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_administration_routes_administration_routes.html#rejectapplication" class="tsd-kind-icon">reject<wbr>Application</a></li>
 							</ul>
 						</section>
 					</div>
@@ -81,16 +84,85 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="createapplication" class="tsd-anchor"></a>
-					<h3>create<wbr>Application</h3>
+					<a name="acceptapplication" class="tsd-anchor"></a>
+					<h3>accept<wbr>Application</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Application<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">accept<wbr>Application<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/volunteers_routes/volunteer_applications.ts#L13">routes/volunteers_routes/volunteer_applications.ts:13</a></li>
+									<li>Defined in routes/administration_routes/administration_routes.ts:78</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getallaplications" class="tsd-anchor"></a>
+					<h3>get<wbr>All<wbr>Aplications</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Aplications<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in routes/administration_routes/administration_routes.ts:10</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="planmeeting" class="tsd-anchor"></a>
+					<h3>plan<wbr>Meeting</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">plan<wbr>Meeting<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in routes/administration_routes/administration_routes.ts:39</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="rejectapplication" class="tsd-anchor"></a>
+					<h3>reject<wbr>Application</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">reject<wbr>Application<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in routes/administration_routes/administration_routes.ts:115</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -135,7 +207,7 @@
 					<li class=" tsd-kind-module">
 						<a href="routes_routes.html">routes/<wbr>Routes</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="routes_administration_routes_administration_routes.html">routes/administration_<wbr>routes/administration_<wbr>routes</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -156,7 +228,7 @@
 					<li class=" tsd-kind-module">
 						<a href="routes_unsecure_routes_data_statuses.html">routes/unsecure_<wbr>routes/data/statuses</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="routes_volunteers_routes_volunteer_applications.html">routes/volunteers_<wbr>routes/volunteer_<wbr>applications</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -170,7 +242,16 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="routes_volunteers_routes_volunteer_applications.html#createapplication" class="tsd-kind-icon">create<wbr>Application</a>
+						<a href="routes_administration_routes_administration_routes.html#acceptapplication" class="tsd-kind-icon">accept<wbr>Application</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="routes_administration_routes_administration_routes.html#getallaplications" class="tsd-kind-icon">get<wbr>All<wbr>Aplications</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="routes_administration_routes_administration_routes.html#planmeeting" class="tsd-kind-icon">plan<wbr>Meeting</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="routes_administration_routes_administration_routes.html#rejectapplication" class="tsd-kind-icon">reject<wbr>Application</a>
 					</li>
 				</ul>
 			</nav>

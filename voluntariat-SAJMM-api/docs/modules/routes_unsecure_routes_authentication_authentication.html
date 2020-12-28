@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>routes/authentication/resets | api</title>
-	<meta name="description" content="Documentation for api">
+	<title>routes/unsecure_routes/authentication/authentication | voluntariat-SAJMM-api</title>
+	<meta name="description" content="Documentation for voluntariat-SAJMM-api">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">api</a>
+					<a href="../index.html" class="title">voluntariat-SAJMM-api</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,13 +52,13 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">api</a>
+					<a href="../modules.html">voluntariat-SAJMM-api</a>
 				</li>
 				<li>
-					<a href="routes_authentication_resets.html">routes/authentication/resets</a>
+					<a href="routes_unsecure_routes_authentication_authentication.html">routes/unsecure_routes/authentication/authentication</a>
 				</li>
 			</ul>
-			<h1>Module routes/authentication/resets</h1>
+			<h1>Module routes/unsecure_routes/authentication/authentication</h1>
 		</div>
 	</div>
 </header>
@@ -72,8 +72,9 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_authentication_resets.html#changepassword" class="tsd-kind-icon">change<wbr>Password</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_authentication_resets.html#resetpasswordpage" class="tsd-kind-icon">reset<wbr>Password<wbr>Page</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_unsecure_routes_authentication_authentication.html#login" class="tsd-kind-icon">login</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_unsecure_routes_authentication_authentication.html#registeradministrator" class="tsd-kind-icon">register<wbr>Administrator</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="routes_unsecure_routes_authentication_authentication.html#registervolunteer" class="tsd-kind-icon">register<wbr>Volunteer</a></li>
 							</ul>
 						</section>
 					</div>
@@ -82,16 +83,47 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="changepassword" class="tsd-anchor"></a>
-					<h3>change<wbr>Password</h3>
+					<a name="login" class="tsd-anchor"></a>
+					<h3>login</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">change<wbr>Password<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">login<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/authentication/resets.ts:11</li>
+									<li>Defined in routes/unsecure_routes/authentication/authentication.ts:15</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check users credential and generate encypted token</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">Context</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request body</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="registeradministrator" class="tsd-anchor"></a>
+					<h3>register<wbr>Administrator</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Administrator<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in routes/unsecure_routes/authentication/authentication.ts:57</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -105,16 +137,16 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="resetpasswordpage" class="tsd-anchor"></a>
-					<h3>reset<wbr>Password<wbr>Page</h3>
+					<a name="registervolunteer" class="tsd-anchor"></a>
+					<h3>register<wbr>Volunteer</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">reset<wbr>Password<wbr>Page<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Volunteer<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/authentication/resets.ts:44</li>
+									<li>Defined in routes/unsecure_routes/authentication/authentication.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -160,22 +192,25 @@
 						<a href="routes_routes.html">routes/<wbr>Routes</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="routes_authentication_authentication.html">routes/authentication/authentication</a>
-					</li>
-					<li class="current tsd-kind-module">
-						<a href="routes_authentication_resets.html">routes/authentication/resets</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_authentication_restrict.html">routes/authentication/restrict</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_data_geographics.html">routes/data/geographics</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_data_statuses.html">routes/data/statuses</a>
+						<a href="routes_administration_routes_administration_routes.html">routes/administration_<wbr>routes/administration_<wbr>routes</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="routes_routes_query.html">routes/routes.query</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_authentication.html">routes/unsecure_<wbr>routes/authentication/authentication</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_resets.html">routes/unsecure_<wbr>routes/authentication/resets</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_restrict.html">routes/unsecure_<wbr>routes/authentication/restrict</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_data_geographics.html">routes/unsecure_<wbr>routes/data/geographics</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_data_statuses.html">routes/unsecure_<wbr>routes/data/statuses</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="routes_volunteers_routes_volunteer_applications.html">routes/volunteers_<wbr>routes/volunteer_<wbr>applications</a>
@@ -191,10 +226,13 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="routes_authentication_resets.html#changepassword" class="tsd-kind-icon">change<wbr>Password</a>
+						<a href="routes_unsecure_routes_authentication_authentication.html#login" class="tsd-kind-icon">login</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="routes_authentication_resets.html#resetpasswordpage" class="tsd-kind-icon">reset<wbr>Password<wbr>Page</a>
+						<a href="routes_unsecure_routes_authentication_authentication.html#registeradministrator" class="tsd-kind-icon">register<wbr>Administrator</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="routes_unsecure_routes_authentication_authentication.html#registervolunteer" class="tsd-kind-icon">register<wbr>Volunteer</a>
 					</li>
 				</ul>
 			</nav>

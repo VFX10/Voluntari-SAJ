@@ -1,6 +1,6 @@
 import * as Koa from 'koa';
-import * as query from '../routes.query';
-import { executeQuery } from "../../database/db";
+import * as query from '../../routes.query';
+import { executeQuery } from '../../../database/db';
 
 export async function getAllStatuses(ctx: Koa.Context) {
 

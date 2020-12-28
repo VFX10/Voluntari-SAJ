@@ -9,3 +9,5 @@ voluntariat-SAJMM-api/app/uploads/cv/
 voluntariat-SAJMM-api/app/uploads/letterOfApplications/
 
 voluntariat-SAJMM-api/package-lock.json
+
+voluntariat-SAJMM-api/app/config.ts

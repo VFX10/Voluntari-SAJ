@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>routes/routes.query | api</title>
-	<meta name="description" content="Documentation for api">
+	<title>routes/routes.query | voluntariat-SAJMM-api</title>
+	<meta name="description" content="Documentation for voluntariat-SAJMM-api">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">api</a>
+					<a href="../index.html" class="title">voluntariat-SAJMM-api</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">api</a>
+					<a href="../modules.html">voluntariat-SAJMM-api</a>
 				</li>
 				<li>
 					<a href="routes_routes_query.html">routes/routes.query</a>
@@ -65,6 +65,30 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This methodes containing <strong>SQL Queries</strong> that will be executed in the database.
+						So the return type <code>{ text: string, values: any[] }</code> represents the following:</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>text</dt>
+						<dd><p>The query that will be executed</p>
+						</dd>
+						<dt>values</dt>
+						<dd><p>Aditional parameters that will be presents in queries.</p>
+							<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+								<h3>Example</h3>
+							</a>
+							<pre><code class="language-ts"><span style="color: #000000">{</span>
+<span style="color: #000000"> text: </span><span style="color: #A31515">`SELECT array_to_json(ARRAY (SELECT row_to_json(rec) FROM (SELECT id, INITCAP(name) as name from persons WHERE email = $1 ORDER BY name) rec), true);`</span><span style="color: #000000">,</span>
+<span style="color: #000000"> values: [</span><span style="color: #001080">emailAddress</span><span style="color: #000000">]</span>
+<span style="color: #000000">}</span>
+</code></pre>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -107,19 +131,32 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:137</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L235">routes/routes.query.ts:235</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Accepts volunteer application.
+									Update information in database.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>volunteer id</p>
+									</div>
 								</li>
 								<li>
 									<h5>identificationCode: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>volunteer identification code</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json object containg a message based on the provided information</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -141,16 +178,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:163</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L290">routes/routes.query.ts:290</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Activate a user account</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Should contain <code>username</code></p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Nothing</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -172,16 +218,47 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:113</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L193">routes/routes.query.ts:193</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new volunteer application.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>volunteer personal information. Should Contain following keys:</p>
+										<ul>
+											<li><p>cityId</p>
+											</li>
+											<li><p>firstName</p>
+											</li>
+											<li><p>lastName</p>
+											</li>
+											<li><p>dateOfBirth</p>
+											</li>
+											<li><p>email</p>
+											</li>
+											<li><p>phoneNumber</p>
+											</li>
+											<li><p>address</p>
+											</li>
+											<li><p>cnp</p>
+											</li>
+											<li><p>ciNumber</p>
+											</li>
+											<li><p>ciSeriesId</p>
+											</li>
+										</ul>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json object containg a message based on the provided information</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -197,31 +274,43 @@
 					<a name="changepassword" class="tsd-anchor"></a>
 					<h3>change<wbr>Password</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">change<wbr>Password<span class="tsd-signature-symbol">(</span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Password<span class="tsd-signature-symbol">(</span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:184</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L326">routes/routes.query.ts:326</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update user account password</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>username: <span class="tsd-signature-type">any</span></h5>
+									<h5>username: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>email address of the user</p>
+									</div>
 								</li>
 								<li>
-									<h5>password: <span class="tsd-signature-type">any</span></h5>
+									<h5>password: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>new password</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Nothing</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li class="tsd-parameter">
-									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -237,10 +326,11 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:86</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L137">routes/routes.query.ts:137</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json array containg all pending volunteer application</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -256,30 +346,26 @@
 					<a name="getcitiesbycounty" class="tsd-anchor"></a>
 					<h3>get<wbr>Cities<wbr>ByCounty</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Cities<wbr>ByCounty<span class="tsd-signature-symbol">(</span>county<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cities<wbr>ByCounty<span class="tsd-signature-symbol">(</span>county<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:1</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L23">routes/routes.query.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>county: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>county name</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
-							<ul class="tsd-parameters">
-								<li class="tsd-parameter">
-									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li class="tsd-parameter">
-									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>Return an json object containg all cities of a specified county</p>
 						</li>
 					</ul>
 				</section>
@@ -293,10 +379,11 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:45</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L79">routes/routes.query.ts:79</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json array containg all counties with their CI Series</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -312,24 +399,17 @@
 					<a name="getcountieswithcities" class="tsd-anchor"></a>
 					<h3>get<wbr>Counties<wbr>With<wbr>Cities</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Counties<wbr>With<wbr>Cities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Counties<wbr>With<wbr>Cities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:24</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L52">routes/routes.query.ts:52</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
-							<ul class="tsd-parameters">
-								<li class="tsd-parameter">
-									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li class="tsd-parameter">
-									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>Return an json array containg all counties with their cities</p>
 						</li>
 					</ul>
 				</section>
@@ -343,16 +423,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:68</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L101">routes/routes.query.ts:101</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>county: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>County name</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json object containg all CI Series of a specific county</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -374,10 +458,11 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:61</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L124">routes/routes.query.ts:124</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json array containg all available statuses</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -393,28 +478,37 @@
 					<a name="getuserdetails" class="tsd-anchor"></a>
 					<h3>get<wbr>User<wbr>Details</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>User<wbr>Details<span class="tsd-signature-symbol">(</span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>User<wbr>Details<span class="tsd-signature-symbol">(</span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:169</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L303">routes/routes.query.ts:303</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieve user account information</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>username: <span class="tsd-signature-type">any</span></h5>
+									<h5>username: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>email address of the user</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an JSON object containing user information</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li class="tsd-parameter">
-									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -424,30 +518,28 @@
 					<a name="isusersuspended" class="tsd-anchor"></a>
 					<h3>is<wbr>User<wbr>Suspended</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>User<wbr>Suspended<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>User<wbr>Suspended<span class="tsd-signature-symbol">(</span>model<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:190</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L339">routes/routes.query.ts:339</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if user account is suspended</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
-							<ul class="tsd-parameters">
-								<li class="tsd-parameter">
-									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li class="tsd-parameter">
-									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>Bool</p>
 						</li>
 					</ul>
 				</section>
@@ -461,16 +553,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:150</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L262">routes/routes.query.ts:262</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check user credentials and return user information</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Should contain <code>username</code> and <code>password</code></p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return userinformation</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -492,19 +593,32 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:129</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L218">routes/routes.query.ts:218</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Plan meeting.
+									Update information in database.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>statusId</p>
+									</div>
 								</li>
 								<li>
 									<h5>date: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>planning date and time</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json object containg a message based on the provided information</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -526,16 +640,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:202</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L365">routes/routes.query.ts:365</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register administrator account</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>should contain <code>email</code> and <code>password</code></p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an JSON object containing a message based on the provided information</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -557,16 +680,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:196</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L352">routes/routes.query.ts:352</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Register volunteer account</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>should contain <code>email</code> and <code>password</code></p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an JSON object containing a message based on the provided information</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -588,16 +720,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:143</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L249">routes/routes.query.ts:249</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Rejects volunteer application.
+									Update information in database.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>volunteer id</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return an json object containg a message based on the provided information</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -619,16 +761,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in routes/routes.query.ts:157</li>
+									<li>Defined in <a href="https://github.com/VFX10/Voluntari-SAJ/blob/b319c03/voluntariat-SAJMM-api/app/routes/routes.query.ts#L277">routes/routes.query.ts:277</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deactivate a user account</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>model: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Should contain <code>username</code></p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<p>Return a message based on user accound status</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter">
 									<h5>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -673,22 +824,25 @@
 						<a href="routes_routes.html">routes/<wbr>Routes</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="routes_authentication_authentication.html">routes/authentication/authentication</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_authentication_resets.html">routes/authentication/resets</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_authentication_restrict.html">routes/authentication/restrict</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_data_geographics.html">routes/data/geographics</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="routes_data_statuses.html">routes/data/statuses</a>
+						<a href="routes_administration_routes_administration_routes.html">routes/administration_<wbr>routes/administration_<wbr>routes</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="routes_routes_query.html">routes/routes.query</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_authentication.html">routes/unsecure_<wbr>routes/authentication/authentication</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_resets.html">routes/unsecure_<wbr>routes/authentication/resets</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_authentication_restrict.html">routes/unsecure_<wbr>routes/authentication/restrict</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_data_geographics.html">routes/unsecure_<wbr>routes/data/geographics</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="routes_unsecure_routes_data_statuses.html">routes/unsecure_<wbr>routes/data/statuses</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="routes_volunteers_routes_volunteer_applications.html">routes/volunteers_<wbr>routes/volunteer_<wbr>applications</a>
